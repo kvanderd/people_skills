@@ -10,6 +10,10 @@ class User < ActiveRecord::Base
 
   #setter method
   def set_proficiency_for(skill, num)
-
+    Proficiency.where(:user_id => self.id, :skill_id => skill.id).first.proficiency
   end
+
 end
+
+
+ 
